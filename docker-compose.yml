@@ -12,10 +12,5 @@ services:
       - ./app:/app
     environment:
       - PATH=/py/bin:${PATH}
-    command: 
-      #sb -c "python manage.py runserver 0.0.0.0:8000"
-      #CMD ["python3", "manage.py", "runserver"]
-      - python3
-      - manage.py
-      - runserver
-      - 0.0.0.0:8000
+    command: >
+      sb -c "python manage.py runserver 0.0.0.0:8000"
